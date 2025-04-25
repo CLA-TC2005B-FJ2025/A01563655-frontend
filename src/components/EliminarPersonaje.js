@@ -19,6 +19,8 @@ function EliminarPersonaje() {
             setMensaje(response.message);
             setError(null);
             setIdEliminar('');
+            const data = await getAllPersonajes();
+            setPersonajes(data);
         } catch (error) {
             setError(error.message);
             setMensaje('');
